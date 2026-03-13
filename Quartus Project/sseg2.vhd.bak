@@ -1,0 +1,29 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY sseg3 IS
+    PORT (bcd : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+            numLeds : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)); --Right Display
+            --signLeds : OUT STD_LOGIC_VECTOR(6 DOWNTO 0); --Left Display
+            --sign : IN STD_LOGIC); --Sign
+END sseg3;
+
+ARCHITECTURE Behavior OF sseg3 IS
+BEGIN
+    PROCESS (bcd)
+    BEGIN
+
+--Determining Which Value to Display
+        CASE (bcd) IS              
+            WHEN "00000000" => numLeds <= "0111011"; --y
+            WHEN "00000001" => numLeds <= "1110110"; --n
+            WHEN OTHERS => numLeds <= "-------";
+        END CASE;
+       
+        --Case sign IS          -- abcdefg
+           -- WHEN '1' => signLeds <= "0000001";
+            --WHEN OTHERS => signLeds <= "0000000";
+        --END CASE;
+       
+    END PROCESS;
+END Behavior;
