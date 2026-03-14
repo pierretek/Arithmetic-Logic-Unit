@@ -20,12 +20,12 @@ This design is comprised of several key components:
 
 ## Truth Tables and Block Diagrams 
 
-Listed below are the truth tables and block diagrams of every component in this design:
+Listed below are the block diagrams and truth tables of every component in this design:
 
 ---
 ### 8bit D-Latch
 
-<div style="display:flex; justify-content:center; align-items:center; gap:30px;">
+<img width="300" alt="d latch" src="https://github.com/user-attachments/assets/d656db7f-6d45-4c5a-8389-6bfec4f41809" />
   
 | Clock | D   | Q       |
 | ----- | --- | ------- |
@@ -34,14 +34,13 @@ Listed below are the truth tables and block diagrams of every component in this 
 | 0     | 1   | `Qpast` |
 | 0     | 0   | `Qpast` |
 
-<img width="300" alt="d latch" src="https://github.com/user-attachments/assets/d656db7f-6d45-4c5a-8389-6bfec4f41809" />
 
-</div>
+
 
 ---
 ### 4:16 Decoder
 
-<div style="display:flex; justify-content:center; align-items:center; gap:30px;">
+<img width="400" alt="d latch" src="https://github.com/user-attachments/assets/1252ddaf-5b21-4353-829e-a02d123298ec" />
   
 | Enable | w₃w₂w₁w₀ | Y₁₅Y₁₄Y₁₃Y₁₂Y₁₁Y₁₀Y₉Y₈Y₇Y₆Y₅Y₄Y₃Y₂Y₁Y₀ |
 | ------ | -------- | -------------------------------------- |
@@ -63,14 +62,13 @@ Listed below are the truth tables and block diagrams of every component in this 
 | 1      | 1111     | 1000000000000000                       |
 | 0      | dddd     | 0000000000000000                       |
 
-<img width="400" alt="d latch" src="https://github.com/user-attachments/assets/1252ddaf-5b21-4353-829e-a02d123298ec" />
 
-</div>
+
 
 ---
 ### Finite State Machine
 
-<div style="display:flex; justify-content:center; align-items:center; gap:30px;">
+<img width="400" alt="fsm" src="https://github.com/user-attachments/assets/6d4defd7-1f44-465b-abf5-497710c3f948" />
   
 | Current State (y₃y₂y₁y₀) | Next State W=0 (Y₃Y₂Y₁Y₀) | Next State W=1 (Y₃Y₂Y₁Y₀) | Output (Z₃Z₂Z₁Z₀) |
 | ------------------------ | ------------------------- | ------------------------- | ----------------- |
@@ -85,16 +83,13 @@ Listed below are the truth tables and block diagrams of every component in this 
 | 1ddd                     | XXXX                      | XXXX                      | XXXX              |
 
 
-<img width="400" alt="fsm" src="https://github.com/user-attachments/assets/6d4defd7-1f44-465b-abf5-497710c3f948" />
-
-</div>
 
 
 
 ---
 ### Arithmetic Logic Unit
 
-<div style="display:flex; justify-content:center; align-items:center; gap:30px;">
+<img width="300" alt="alu" src="https://github.com/user-attachments/assets/fdaea61b-157f-4245-ae0a-4b790923b41a" />
   
 | Function Number | Opcode            | Function     |
 | --------------- | ----------------- | ------------ |
@@ -107,9 +102,6 @@ Listed below are the truth tables and block diagrams of every component in this 
 | #7              | 00000000 01000000 | A ⊕ B (XOR)  |
 | #8              | 00000000 10000000 | A ∨ B (OR)   |
 
-<img width="300" alt="alu" src="https://github.com/user-attachments/assets/fdaea61b-157f-4245-ae0a-4b790923b41a" />
-
-</div>
 
 
 
